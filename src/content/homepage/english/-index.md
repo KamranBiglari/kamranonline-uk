@@ -1,53 +1,57 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Astro Project"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Cloud Engineering & DevOps Insights"
+  content: "Welcome to KamranOnline - your resource for practical AWS, GCP, and DevOps tutorials. Learn cloud architecture, infrastructure as code, and modern deployment practices through hands-on guides and real-world examples."
   image: "/images/banner.png"
   button:
     enable: true
-    label: "Fork Deploy and Edit Online 🚀"
-    link: "https://app.sitepins.com/new/clone?name=Astroplate&repository=https://github.com/zeon-studio/astroplate/tree/multilingual"
+    label: "Explore Blog Posts"
+    link: "/blog"
 
 # Features
 features:
-  - title: "What's Included in Astroplate"
+  - title: "AWS Cloud Solutions"
     image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
+    content: "Deep dive into Amazon Web Services with comprehensive tutorials covering compute, storage, networking, and serverless architectures."
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Astro and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
-    button:
-      enable: false
-      label: "Get Started Now"
-      link: "#"
-
-  - title: "Discover the Key Features Of Astro"
-    image: "/images/service-2.png"
-    content: "Astro is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
-    bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+      - "Lambda & Serverless Architecture"
+      - "EC2, ECS & Container Orchestration"
+      - "S3, CloudFront & Content Delivery"
+      - "VPC Design & Network Security"
+      - "Infrastructure as Code with Terraform & CloudFormation"
+      - "Cost Optimization & Best Practices"
     button:
       enable: true
-      label: "Get Started Now"
-      link: "https://github.com/zeon-studio/astroplate"
+      label: "View AWS Articles"
+      link: "/categories/aws"
 
-  - title: "The Top Reasons to Choose Astro for Your Next Project"
-    image: "/images/service-3.png"
-    content: "With Astro, you can build modern and content-focused websites without sacrificing performance or ease of use."
+  - title: "Google Cloud Platform"
+    image: "/images/service-2.png"
+    content: "Explore GCP services and learn how to build scalable, reliable applications on Google's infrastructure with practical examples and comparisons."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "Cloud Run & App Engine Deployments"
+      - "Kubernetes Engine (GKE) Management"
+      - "Cloud Storage & BigQuery Analytics"
+      - "Cloud Functions & Event-Driven Architecture"
+      - "GCP vs AWS: Feature Comparisons"
     button:
-      enable: false
-      label: ""
-      link: ""
+      enable: true
+      label: "View GCP Articles"
+      link: "/categories/gcp"
+
+  - title: "DevOps & Automation"
+    image: "/images/service-3.png"
+    content: "Master modern DevOps practices including CI/CD pipelines, containerization, monitoring, and infrastructure automation to streamline your development workflow."
+    bulletpoints:
+      - "CI/CD with GitHub Actions, GitLab CI & Jenkins"
+      - "Docker & Kubernetes Best Practices"
+      - "Infrastructure as Code (Terraform, Ansible, Pulumi)"
+      - "Monitoring & Observability (Prometheus, Grafana)"
+      - "Security & Compliance Automation"
+      - "GitOps & ArgoCD Workflows"
+    button:
+      enable: true
+      label: "View DevOps Articles"
+      link: "/categories/devops"
 ---
