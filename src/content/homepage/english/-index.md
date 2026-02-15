@@ -3,7 +3,7 @@
 banner:
   title: "Cloud Engineering & DevOps Insights"
   content: "Welcome to KamranOnline - your resource for practical AWS, GCP, and DevOps tutorials. Learn cloud architecture, infrastructure as code, and modern deployment practices through hands-on guides and real-world examples."
-  image: "/images/banner.png"
+  image: "/images/kamranonline-banner.png"
   button:
     enable: true
     label: "Explore Blog Posts"
