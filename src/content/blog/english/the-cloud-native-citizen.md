@@ -14,8 +14,6 @@ Just putting an application into a container doesn't automatically make it cloud
 
 Kubernetes is not just a container runtime; it's an automation platform. To unlock its superpowers—self-healing, scaling, and automated deployments—your applications can't simply exist. **They must participate.**
 
-![The Cloud Native Citizen](/images/blog/the-cloud-native-citizen/Cloud_Native_Citizenship-1.jpg)
-
 ## The Paradigm Shift: From Objects to Pods
 
 In traditional application development, we focused on **objects** as the fundamental building blocks—classes encapsulating logic within a single process. The cloud native world introduces a new primitive: **the Pod**.
