@@ -2,7 +2,7 @@
 title: "About Kamran Biglari"
 meta_title: "About"
 description: "Kamran Biglari - Chief Cloud Engineer with 15+ years in cloud computing, infrastructure automation, and DevOps practices. Specialized in AWS, Terraform, multi-cloud architectures, and AI integration."
-image: "/images/avatar.png"
+image: "/images/kb-avatar.png"
 draft: false
 ---
 
