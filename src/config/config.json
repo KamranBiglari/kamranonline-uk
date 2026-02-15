@@ -1,0 +1,60 @@
+{
+  "site": {
+    "title": "KamranOnline - Technical Blog",
+    "base_url": "https://kamranonline.uk",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo_width": "150",
+    "logo_height": "30",
+    "logo_text": "KamranOnline"
+  },
+
+  "settings": {
+    "search": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 6,
+    "summary_length": 200,
+    "blog_folder": "blog",
+    "default_language": "en",
+    "disable_languages": [],
+    "default_language_in_subdir": false
+  },
+
+  "announcement": {
+    "enable": false,
+    "expire_days": 7
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "© 2026 KamranOnline. All Rights Reserved."
+  },
+
+  "navigation_button": {
+    "enable": false,
+    "label": "GitHub",
+    "link": "#"
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": ""
+  },
+
+  "disqus": {
+    "enable": false,
+    "shortname": "",
+    "settings": {}
+  },
+
+  "metadata": {
+    "meta_author": "Kamran Biglari",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Technical blog covering AWS, GCP, and DevOps topics. Practical insights and hands-on tutorials for cloud engineers."
+  }
+}

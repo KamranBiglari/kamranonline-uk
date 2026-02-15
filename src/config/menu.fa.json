@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "name": "خانه", "url": "/" },
+    { "name": "درباره", "url": "/about" },
+    { "name": "وبلاگ", "url": "/blog" },
+    {
+      "name": "دسته‌بندی‌ها",
+      "url": "/categories",
+      "hasChildren": true,
+      "children": [
+        { "name": "AWS", "url": "/categories/aws" },
+        { "name": "GCP", "url": "/categories/gcp" },
+        { "name": "DevOps", "url": "/categories/devops" },
+        { "name": "همه دسته‌بندی‌ها", "url": "/categories" }
+      ]
+    }
+  ],
+  "footer": [
+    { "name": "درباره", "url": "/about" },
+    { "name": "وبلاگ", "url": "/blog" },
+    { "name": "حریم خصوصی", "url": "/privacy-policy" }
+  ]
+}

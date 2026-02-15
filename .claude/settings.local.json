@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:statichunt.com)",
+      "WebFetch(domain:inhaq.com)",
+      "WebFetch(domain:astroplate-multilang.netlify.app)",
+      "Bash(git clone:*)",
+      "Bash(yarn install)",
+      "Bash(npm install:*)",
+      "Bash(npm run check:*)",
+      "Bash(npm run build:*)",
+      "Bash(node scripts/jsonGenerator.js:*)",
+      "Bash(timeout 5 npm run preview:*)"
+    ]
+  }
+}

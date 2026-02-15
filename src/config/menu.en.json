@@ -1,0 +1,23 @@
+{
+  "main": [
+    { "name": "Home", "url": "/" },
+    { "name": "About", "url": "/about" },
+    { "name": "Blog", "url": "/blog" },
+    {
+      "name": "Categories",
+      "url": "/categories",
+      "hasChildren": true,
+      "children": [
+        { "name": "AWS", "url": "/categories/aws" },
+        { "name": "GCP", "url": "/categories/gcp" },
+        { "name": "DevOps", "url": "/categories/devops" },
+        { "name": "All Categories", "url": "/categories" }
+      ]
+    }
+  ],
+  "footer": [
+    { "name": "About", "url": "/about" },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Privacy Policy", "url": "/privacy-policy" }
+  ]
+}
