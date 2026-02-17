@@ -1,5 +1,4 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 import { getTranslations, supportedLang } from "@/lib/utils/languageParser";
@@ -22,7 +21,6 @@ if (contactIndex[0].data.draft) {
   return Astro.redirect("/404");
 }
 
-const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contactIndex[0].data;
 
 const {
@@ -35,6 +33,8 @@ const {
   company_placeholder,
   inquiry_type,
 } = await getTranslations(lang as keyof ContentEntryMap);
+
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "";
 
 const inquiryOptions = [
   { value: "aws", label: "AWS Cloud Architecture & Migration" },
@@ -69,7 +69,6 @@ const inquiryOptions = [
             </p>
 
             <div class="space-y-5">
-              <!-- Response time -->
               <div class="flex items-start gap-3">
                 <span class="mt-0.5 text-primary text-lg">⚡</span>
                 <div>
@@ -80,7 +79,6 @@ const inquiryOptions = [
                 </div>
               </div>
 
-              <!-- Email -->
               <div class="flex items-start gap-3">
                 <span class="mt-0.5 text-primary text-lg">✉️</span>
                 <div>
@@ -94,7 +92,6 @@ const inquiryOptions = [
                 </div>
               </div>
 
-              <!-- LinkedIn -->
               <div class="flex items-start gap-3">
                 <span class="mt-0.5 text-primary text-lg">💼</span>
                 <div>
@@ -110,7 +107,6 @@ const inquiryOptions = [
                 </div>
               </div>
 
-              <!-- GitHub -->
               <div class="flex items-start gap-3">
                 <span class="mt-0.5 text-primary text-lg">🐙</span>
                 <div>
@@ -127,10 +123,8 @@ const inquiryOptions = [
               </div>
             </div>
 
-            <!-- Divider -->
             <hr class="my-6 border-border dark:border-darkmode-border" />
 
-            <!-- Services -->
             <h4 class="text-sm font-semibold mb-3">I can help with:</h4>
             <ul class="space-y-2 text-xs text-text dark:text-darkmode-text">
               <li class="flex items-center gap-2"><span class="text-primary">→</span> AWS Architecture & Migration</li>
@@ -146,7 +140,17 @@ const inquiryOptions = [
 
         <!-- Right: Form -->
         <div class="md:col-7 lg:col-8">
-          <form action={contact_form_action} method="POST" class="space-y-5">
+          <form
+            name="contact"
+            method="POST"
+            action="/thank-you"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="space-y-5"
+          >
+            <!-- Required hidden fields for Netlify Forms -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
 
             <!-- Name + Email row -->
             <div class="row g-4">
@@ -228,7 +232,24 @@ const inquiryOptions = [
                 required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">{submit}</button>
+            <!-- Cloudflare Turnstile -->
+            <div>
+              <div
+                class="cf-turnstile"
+                data-sitekey={turnstileSiteKey}
+                data-callback="onTurnstileSuccess"
+                data-theme="auto"
+              ></div>
+            </div>
+
+            <button
+              type="submit"
+              id="contact-submit"
+              class="btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled
+            >
+              {submit}
+            </button>
           </form>
         </div>
 
@@ -236,3 +257,14 @@ const inquiryOptions = [
     </div>
   </section>
 </Base>
+
+<!-- Turnstile script -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+  // Enable submit button once Turnstile verifies the user
+  (window as any).onTurnstileSuccess = function () {
+    const btn = document.getElementById("contact-submit") as HTMLButtonElement;
+    if (btn) btn.disabled = false;
+  };
+</script>

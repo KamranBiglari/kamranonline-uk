@@ -31,7 +31,7 @@
   },
 
   "params": {
-    "contact_form_action": "#",
+    "contact_form_action": "/thank-you",
     "copyright": "© 2026 KamranOnline. All Rights Reserved."
   },
 
