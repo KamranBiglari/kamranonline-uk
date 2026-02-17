@@ -13,11 +13,13 @@
         { "name": "DevOps", "url": "/categories/devops" },
         { "name": "All Categories", "url": "/categories" }
       ]
-    }
+    },
+    { "name": "Contact", "url": "/contact" }
   ],
   "footer": [
     { "name": "About", "url": "/about" },
     { "name": "Blog", "url": "/blog" },
+    { "name": "Contact", "url": "/contact" },
     { "name": "Privacy Policy", "url": "/privacy-policy" }
   ]
 }

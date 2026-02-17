@@ -88,7 +88,7 @@ I'm always interested in connecting with fellow cloud engineers, DevOps practiti
 
 * **GitHub**: [github.com/KamranBiglari](https://github.com/KamranBiglari) (4600+ contributions)
 * **LinkedIn**: [linkedin.com/in/kamran-biglari](https://www.linkedin.com/in/kamran-biglari/)
-* **Email**: kamran@kamranonline.uk
+* **Email**: kam@kamranonline.uk
 
 ---
 

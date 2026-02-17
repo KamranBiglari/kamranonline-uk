@@ -1574,4 +1574,4 @@ This Terraform module solves a real pain point for hybrid cloud teams, enabling 
 
 ---
 
-*Have questions or suggestions? Open an issue on [GitHub](https://github.com/KamranBiglari/terraform-aws-hetzner-cloudwatch-integration/issues) or reach out at kamran@kamranonline.uk*
+*Have questions or suggestions? Open an issue on [GitHub](https://github.com/KamranBiglari/terraform-aws-hetzner-cloudwatch-integration/issues) or reach out at kam@kamranonline.uk*

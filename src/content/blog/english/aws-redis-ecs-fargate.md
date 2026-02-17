@@ -1107,4 +1107,4 @@ The Terraform module handles the complexity of cluster initialization, service d
 
 ---
 
-*Have questions or suggestions? Feel free to open an issue on [GitHub](https://github.com/KamranBiglari/terraform-aws-containerize-redis/issues) or reach out at kamran@kamranonline.uk*
+*Have questions or suggestions? Feel free to open an issue on [GitHub](https://github.com/KamranBiglari/terraform-aws-containerize-redis/issues) or reach out at kam@kamranonline.uk*

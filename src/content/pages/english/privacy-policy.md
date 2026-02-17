@@ -65,7 +65,7 @@ We take reasonable measures to protect the information we collect:
 
 ## Email Communication
 
-If you contact us via email at kamran@kamranonline.uk, we will only use your email address to respond to your inquiry. We do not add email addresses to mailing lists without explicit consent.
+If you contact us via email at kam@kamranonline.uk, we will only use your email address to respond to your inquiry. We do not add email addresses to mailing lists without explicit consent.
 
 ## Children's Privacy
 
@@ -90,7 +90,7 @@ We encourage you to review this Privacy Policy periodically to stay informed abo
 
 If you have any questions or concerns about this Privacy Policy, please contact us:
 
-- **Email**: kamran@kamranonline.uk
+- **Email**: kam@kamranonline.uk
 - **Website**: [kamranonline.uk](https://kamranonline.uk)
 
 ## Compliance
@@ -114,4 +114,4 @@ Our primary goal is to provide valuable technical content and tutorials to the c
 
 ---
 
-*For questions about this privacy policy or our data practices, please reach out via email at kamran@kamranonline.uk*
+*For questions about this privacy policy or our data practices, please reach out via email at kam@kamranonline.uk*

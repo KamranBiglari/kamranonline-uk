@@ -31,7 +31,20 @@ const {
   anything_else,
   contact_message_placeholder,
   submit,
+  company,
+  company_placeholder,
+  inquiry_type,
 } = await getTranslations(lang as keyof ContentEntryMap);
+
+const inquiryOptions = [
+  { value: "aws", label: "AWS Cloud Architecture & Migration" },
+  { value: "devops", label: "DevOps & CI/CD Pipeline Setup" },
+  { value: "kubernetes", label: "Kubernetes & Container Orchestration" },
+  { value: "terraform", label: "Infrastructure as Code (Terraform)" },
+  { value: "hybrid", label: "Hybrid & Multi-Cloud Strategy" },
+  { value: "ai", label: "AI / MCP Integration with AWS Bedrock" },
+  { value: "other", label: "Other / General Inquiry" },
+];
 ---
 
 <Base
@@ -43,36 +56,165 @@ const {
   <PageHeader title={title} />
   <section class="section-sm">
     <div class="container">
-      <div class="row">
-        <div class="mx-auto md:col-10 lg:col-6">
-          <form action={contact_form_action} method="POST">
-            <div class="mb-6">
-              <label for="name" class="form-label">
-                {full_name}
-                <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                class="form-input"
-                placeholder="John Doe"
-                type="text"
-              />
+      <div class="row g-5">
+
+        <!-- Left: Info Panel -->
+        <div class="md:col-5 lg:col-4">
+          <div class="rounded-xl bg-light p-8 dark:bg-darkmode-light h-full">
+            <h3 class="h5 mb-4">Let's Work Together</h3>
+            <p class="text-text dark:text-darkmode-text mb-6 text-sm leading-relaxed">
+              Whether you need help migrating to AWS, building CI/CD pipelines,
+              designing Kubernetes architecture, or solving a complex DevOps
+              challenge — I'd love to hear about your project.
+            </p>
+
+            <div class="space-y-5">
+              <!-- Response time -->
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 text-primary text-lg">⚡</span>
+                <div>
+                  <p class="font-semibold text-sm">Fast Response</p>
+                  <p class="text-xs text-text dark:text-darkmode-text">
+                    I typically reply within 24 hours
+                  </p>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 text-primary text-lg">✉️</span>
+                <div>
+                  <p class="font-semibold text-sm">Email</p>
+                  <a
+                    href="mailto:kam@kamranonline.uk"
+                    class="text-xs text-primary hover:underline"
+                  >
+                    kam@kamranonline.uk
+                  </a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 text-primary text-lg">💼</span>
+                <div>
+                  <p class="font-semibold text-sm">LinkedIn</p>
+                  <a
+                    href="https://www.linkedin.com/in/kamran-biglari/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-primary hover:underline"
+                  >
+                    linkedin.com/in/kamran-biglari
+                  </a>
+                </div>
+              </div>
+
+              <!-- GitHub -->
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 text-primary text-lg">🐙</span>
+                <div>
+                  <p class="font-semibold text-sm">GitHub</p>
+                  <a
+                    href="https://github.com/KamranBiglari"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-primary hover:underline"
+                  >
+                    github.com/KamranBiglari
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="mb-6">
-              <label for="email" class="form-label">
-                {working_mail}
-                <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="email"
-                name="email"
-                class="form-input"
-                placeholder="john.doe@email.com"
-                type="email"
-              />
+
+            <!-- Divider -->
+            <hr class="my-6 border-border dark:border-darkmode-border" />
+
+            <!-- Services -->
+            <h4 class="text-sm font-semibold mb-3">I can help with:</h4>
+            <ul class="space-y-2 text-xs text-text dark:text-darkmode-text">
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> AWS Architecture & Migration</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> Terraform & Infrastructure as Code</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> Kubernetes & ECS Fargate</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> CI/CD Pipelines & GitOps</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> Hybrid & Multi-Cloud Strategy</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> AI Integration (MCP / Bedrock)</li>
+              <li class="flex items-center gap-2"><span class="text-primary">→</span> Cost Optimisation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="md:col-7 lg:col-8">
+          <form action={contact_form_action} method="POST" class="space-y-5">
+
+            <!-- Name + Email row -->
+            <div class="row g-4">
+              <div class="sm:col-6">
+                <label for="name" class="form-label">
+                  {full_name}
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="John Doe"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="sm:col-6">
+                <label for="email" class="form-label">
+                  {working_mail}
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="john@company.com"
+                  type="email"
+                  required
+                />
+              </div>
             </div>
-            <div class="mb-6">
+
+            <!-- Company + Inquiry Type row -->
+            <div class="row g-4">
+              <div class="sm:col-6">
+                <label for="company" class="form-label">
+                  {company}
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  class="form-input"
+                  placeholder={company_placeholder}
+                  type="text"
+                />
+              </div>
+              <div class="sm:col-6">
+                <label for="inquiry_type" class="form-label">
+                  {inquiry_type}
+                  <span class="text-red-500">*</span>
+                </label>
+                <select
+                  id="inquiry_type"
+                  name="inquiry_type"
+                  class="form-input"
+                  required
+                >
+                  <option value="" disabled selected>Select a service area</option>
+                  {inquiryOptions.map((opt) => (
+                    <option value={opt.value}>{opt.label}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div>
               <label for="message" class="form-label">
                 {anything_else}
                 <span class="text-red-500">*</span>
@@ -82,11 +224,14 @@ const {
                 name="message"
                 class="form-input"
                 placeholder={contact_message_placeholder}
-                rows="8"></textarea>
+                rows="7"
+                required></textarea>
             </div>
+
             <button type="submit" class="btn btn-primary">{submit}</button>
           </form>
         </div>
+
       </div>
     </div>
   </section>

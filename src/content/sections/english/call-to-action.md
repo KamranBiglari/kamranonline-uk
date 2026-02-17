@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Astro?"
+title: "Need Help with Your Cloud Infrastructure?"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Astroplate and Astro. Build lightning-fast static sites with ease and flexibility."
+description: "Whether you're migrating to AWS, setting up Kubernetes, building CI/CD pipelines, or designing a multi-cloud architecture — I'm here to help. Let's solve your DevOps challenges together."
 button:
   enable: true
-  label: "Fork Deploy and Edit Online 🚀"
-  link: "https://app.sitepins.com/new/clone?name=Astroplate&repository=https://github.com/zeon-studio/astroplate/tree/multilingual"
+  label: "Get in Touch"
+  link: "/contact"
 ---
